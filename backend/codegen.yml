@@ -1,0 +1,10 @@
+overwrite: true
+schema:
+  "./src/**/*.ts":
+    noRequire: true
+generates:
+  ./src/generated/types.ts:
+    plugins:
+      - add: "// @ts-ignore"
+      - "typescript"
+      - "typescript-resolvers"

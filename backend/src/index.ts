@@ -1,7 +1,9 @@
-import { ApolloServer, gql } from "apollo-server";
+import lodash from "lodash";
+import { ApolloServer, gql, makeExecutableSchema } from "apollo-server";
+import { Resolvers } from "./generated/types";
 
 // The GraphQL schema
-const typeDefs = gql`
+const commonTypeDefs = gql`
   type Query {
     "A simple type for getting started!"
     hello: String
@@ -9,17 +11,21 @@ const typeDefs = gql`
 `;
 
 // A map of functions which return data for the schema.
-const resolvers = {
+const commonResolvers: Resolvers = {
   Query: {
-    hello: () => "world",
+    hello: () => "world!",
   },
 };
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+const schema = makeExecutableSchema({
+  typeDefs: [commonTypeDefs],
+  resolvers: lodash.merge(commonResolvers),
 });
 
-server.listen().then(({ url }) => {
+const server = new ApolloServer({
+  schema,
+});
+
+server.listen(3000).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
