@@ -10,6 +10,7 @@
     "inlineSourceMap": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "target": "es2018",
     "lib": ["es2018", "dom"],
     "rootDirs": ["src"],
