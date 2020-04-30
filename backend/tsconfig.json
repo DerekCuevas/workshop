@@ -9,6 +9,7 @@
     "declaration": true,
     "inlineSourceMap": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "target": "es2018",
     "lib": ["es2018", "dom"],
     "rootDirs": ["src"],
