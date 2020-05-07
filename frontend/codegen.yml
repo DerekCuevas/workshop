@@ -1,0 +1,8 @@
+schema: "http://localhost:3000/graphql"
+generates:
+  ./src/generated/types.ts:
+    documents: "./src/api.ts"
+    plugins:
+      - add: "// @ts-ignore"
+      - "typescript"
+      - "typescript-operations"

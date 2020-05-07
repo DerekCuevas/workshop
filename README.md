@@ -1,8 +1,18 @@
 # Workshop
 
-## Agenda
+## Day 2 - Getting Started with React & Apollo Client
 
-Day 1 - Backend with GraphQL
+- GraphQL Review
+- React Overview (https://reactjs.org/)
+  - Component based (https://reactjs.org/docs/react-component.html)
+- Setup React App (https://create-react-app.dev/)
+- Setup Apollo Client (https://www.apollographql.com/docs/react/)
+- Create components to display a list of products
+- Homework
+  - Display product categories
+  - Display product reviews
+
+## Day 1 - Backend with GraphQL
 
 - Discuss Project Goal (Building a simple e-commerce website)
   - Why e-commerce is a good example?
