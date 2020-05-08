@@ -1,0 +1,21 @@
+[
+  {
+    "id": "980db207-b3f9-4802-8d37-691f0e65f4cd",
+    "productId": "1091145b-d6a8-478e-ae05-ea7b91df2e45",
+    "name": "Van Powlowski",
+    "rating": 98381
+  },
+  {
+    "id": "5341b697-b714-4517-9950-6c883e335937",
+    "productId": "1091145b-d6a8-478e-ae05-ea7b91df2e45",
+    "name": "Davonte Daniel",
+    "rating": 23127,
+    "text": "soluta"
+  },
+  {
+    "id": "c0416aac-b6b2-47df-8532-361b6f25c4fc",
+    "productId": "c442633d-d9f3-43da-8816-dc87dcc26183",
+    "name": "Shaniya Hessel",
+    "rating": 94784
+  }
+]

@@ -71,3 +71,7 @@ Cons:
 - Less optimal performance.
 - Caching. No obvious key. Doesn't fit well with HTTP caching semantics
 - Compatibility with HTTP. Typical to not use stadard HTTP semantics (methods, error handling)
+
+## Usefull tools
+
+- https://google.github.io/intermock/

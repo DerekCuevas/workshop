@@ -2,16 +2,19 @@
   {
     "id": "1091145b-d6a8-478e-ae05-ea7b91df2e45",
     "name": "Domenica Nicolas",
-    "description": "omnis qui commodi"
+    "description": "omnis qui commodi",
+    "categories": ["LEISURE", "FOOD"]
   },
   {
     "id": "f79e0a4f-c0cd-4c48-9052-a1b380aa8ee3",
     "name": "Barrett Wyman",
-    "description": "Natus est qui laboriosam aut expedita.\nTemporibus quibusdam dolor id voluptatem est.\nVoluptate quasi cumque."
+    "description": "Natus est qui laboriosam aut expedita.\nTemporibus quibusdam dolor id voluptatem est.\nVoluptate quasi cumque.",
+    "categories": ["FOOD"]
   },
   {
     "id": "c442633d-d9f3-43da-8816-dc87dcc26183",
     "name": "Leonel Vandervort",
-    "description": "optio est similique"
+    "description": "optio est similique",
+    "categories": []
   }
 ]

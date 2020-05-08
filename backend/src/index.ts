@@ -3,29 +3,42 @@ import { ApolloServer, gql, makeExecutableSchema } from "apollo-server";
 import { Resolvers } from "./generated/types";
 import * as DAL from "./data-access";
 
-// The GraphQL schema
 const commonTypeDefs = gql`
+  enum Category {
+    LEISURE
+    GAMING
+    FOOD
+    EXERCISE
+    OUTDOORS
+  }
+
+  type Review {
+    id: ID!
+    name: String!
+    rating: Int!
+    text: String
+  }
+
   type Product {
     id: ID!
     name: String!
+    description: String!
+    categories: [Category!]!
+    reviews: [Review!]
   }
 
   type Query {
-    "A simple type for getting started!"
-    hello: String!
+    product(id: ID!): Product
     products: [Product!]!
   }
 `;
 
-// A map of functions which return data for the schema.
 const commonResolvers: Resolvers = {
   Product: {
-    id: (root) => root.id,
-    name: (root) => root.name,
+    reviews: (root) => DAL.getReviewsForProduct(root.id),
   },
-
   Query: {
-    hello: () => "world!",
+    product: (_root, args) => DAL.getProductById(args.id),
     products: () => DAL.getProducts(),
   },
 };
