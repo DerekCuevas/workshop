@@ -5,10 +5,15 @@ export const client = new ApolloClient({
 });
 
 export const productsQuery = gql`
+  fragment ProductInfo on Product {
+    id
+    name
+    description
+  }
+
   query Products {
     products {
-      id
-      name
+      ...ProductInfo
     }
   }
 `;
