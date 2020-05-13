@@ -1,9 +1,17 @@
 import React from 'react';
+import { Product } from './Product';
+import { ProductInfoFragment } from '../generated/types';
 
-export class ProductList extends React.Component {
+type Props = {
+  products: ProductInfoFragment[]
+}
+
+export class ProductList extends React.Component<Props> {
   render() {
     return (
-      <div>Product List</div>
+      <div>
+        {this.props.products.map(p => (<Product key={p.id} product={p} />))}
+      </div>
     );
   }
 }

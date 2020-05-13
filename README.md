@@ -85,3 +85,14 @@ Cons:
 ## Usefull tools
 
 - https://google.github.io/intermock/
+
+## React.StrictMode
+
+- Tool for highlighting potential issues in a React app, including:
+  - Components with unsafe lifecycles
+  - Use of legacy string ref API
+  - Use of deprecated findDOMNode
+- Does NOT affect production build
+- Resources:
+  - https://reactjs.org/docs/strict-mode.html
+  - https://medium.com/nmc-techblog/wait-youre-not-using-react-strictmode-a9713927a33b
