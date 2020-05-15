@@ -1,5 +1,38 @@
 # Workshop
 
+## Day 3 - React Architecture: State Management and Side Effects
+
+### State Management
+
+> React is a state management library
+
+https://kentcdodds.com/blog/application-state-management-with-react
+
+Key concepts
+
+- global vs local state
+- single source of truth
+- derived state, memoization
+- observability
+
+Libraries
+
+- Redux https://github.com/reduxjs/redux
+  - Redux Toolkit https://redux-toolkit.js.org
+  - Reselect https://github.com/reduxjs/reselect
+  - Middleware (important concept since many libs are build ontop of this) https://redux.js.org/advanced/middleware
+- Mobx https://github.com/mobxjs/mobx
+- Unstated https://github.com/jamiebuilds/unstated
+- Apollo https://www.apollographql.com/docs/react/data/local-state/
+
+### Side effects (Redux only)
+
+- Thunk https://github.com/reduxjs/redux-thunk
+- Saga https://github.com/redux-saga/redux-saga
+- Observable https://github.com/redux-observable/redux-observable
+  - RxJS https://github.com/ReactiveX/rxjs
+- Loop https://github.com/redux-loop/redux-loop
+
 ## Day 2 - Getting Started with React & Apollo Client
 
 - GraphQL Review
