@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
-import { client, productsQuery } from './api';
-import { ProductList } from './components/ProductList';
-import { ProductInfoFragment } from './generated/types'
+import React from "react";
+import "./App.css";
+import { CounterHook, CounterClass } from "./components/Counter";
+import { client, productsQuery } from "./api";
+import { ProductList } from "./components/ProductList";
+import { ProductInfoFragment } from "./generated/types";
 
-type Props = {}
+type Props = {};
 
 type State = {
   products: ProductInfoFragment[];
-}
+};
 
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -19,12 +20,16 @@ class App extends React.Component<Props, State> {
   componentDidMount() {
     client
       .query({ query: productsQuery })
-      .then(result => this.setState({ products: result.data.products }));
+      .then((result) => this.setState({ products: result.data.products }));
   }
 
   render() {
     return (
-      <ProductList products={this.state.products} />
+      <>
+        <CounterClass init={1} max={5} />
+        <CounterHook init={1} max={5} />
+        <ProductList products={this.state.products} />;
+      </>
     );
   }
 }
